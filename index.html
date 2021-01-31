@@ -12,14 +12,14 @@
 
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row generate-section">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
                     <input class="generate-input form-control" type="text">
                     <button class="generate-btn">Generate Pin</button>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 matching-section">
                 <div class=" input-section half-width">
                     <input class="matcher-input form-control" type="text">
                     <div class="numbers">
@@ -53,18 +53,20 @@
                 </div>
             </div>
             <div class="notify-section">
-                <p  class="notify wrong">❌ Pin Didn't Match, Please try again</p>
-                <p  class="notify correct">✅ Pin Matched... Secret door is opening for you</p>
-                <p class="notify theif">😡 Get out from here. You are a thief . you cant open this door. <br> I am locked very hard</p>
+                <p class="notify wrong">❌ Pin Didn't Match, Please try again</p>
+                <p class="notify correct">✅ Pin Matched... Secret door is opening for you</p>
+                <p class="notify theif">😡 Get out from here. You are a thief . you cant open this door. <br> I am
+                    locked very hard</p>
             </div>
         </div>
+    </div>
 
 
 
-        <!-- ---------------------------------------------------------------------
+    <!-- ---------------------------------------------------------------------
     ---------------------All script are here--------------------------------------
 ----------------------------------------------------------------------------------- -->
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>

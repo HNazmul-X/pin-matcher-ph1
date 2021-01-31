@@ -106,7 +106,7 @@ color: #E0B612;
 }
 .up-down{
     display: block;
-    animation:  upDown 1s;
+    animation:  upDown 5s;
 }
 @keyframes upDown {
     0%{

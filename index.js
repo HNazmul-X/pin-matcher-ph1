@@ -46,25 +46,18 @@ for(var i = 0; i < numberBtn.length ; i ++){
 const  isValueMatchCheck = document.querySelector('.calc-body .submit-btn');
 isValueMatchCheck.addEventListener('click',function(){
     if(isValueMatch(pinGenerateInput.value, matcherInput.value)==true){
-       var rightNotice =   document.querySelector('.notify.correct')
-       rightNotice.classList.add('up-down')
-       rightNotice.addEventListener('click',function(){
-           this.classList.remove("up-down")
-       })
+      showmassage(".notify.correct");
+      pinGenerateInput.value = ''
     } else{
-        var wrongNotice = document.querySelector('.notify.wrong')
-        wrongNotice.classList.add('up-down')
-        wrongNotice.addEventListener('click', function (e) {
-            this.classList.remove("up-down")
-        });
+        showmassage(".notify.wrong");
        var trial =  document.getElementById("trial")
        trial.innerHTML--;
        if(trial.innerText <= 0){
-           var theif = document.querySelector(".notify.theif");
-           theif.classList.add("up-down")
+           showmassage(".notify.theif");
            
        }
     }
+    matcherInput.value = '';
 })
 
 function isValueMatch(value1,value2){
@@ -73,4 +66,11 @@ function isValueMatch(value1,value2){
     } else{
         return false;
     }
+}
+function showmassage(massageBoxSelector){
+ var rightNotice = document.querySelector(massageBoxSelector);
+ rightNotice.classList.add("up-down");
+ rightNotice.addEventListener("click", function () {
+   this.classList.remove("up-down");
+ });
 }
